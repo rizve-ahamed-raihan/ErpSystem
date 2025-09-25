@@ -7,6 +7,7 @@
 </head>
 <body class="p-6 bg-gradient-to-r from-blue-50 via-white to-pink-50 min-h-screen">
 
+  
   <div class="max-w-6xl mx-auto">
     <!-- Page Header -->
     <div class="flex items-center justify-between mb-8">

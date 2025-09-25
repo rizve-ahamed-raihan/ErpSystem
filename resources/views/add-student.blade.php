@@ -4,15 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-  <title>Add Student</title>
+  <title>Add Customer</title>
 </head>
-<body class="bg-gradient-to-br from-gray-100 to-gray-200 min-h-screen flex items-center justify-center">
+<body class="bg-gradient-to-br from-gray-100 to-gray-200 min-h-screen flex flex-col items-center pt-10">
   
+  <!-- Welcome Header -->
+  <h1 class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 drop-shadow-lg mb-10">
+    Welcome to ERP System
+  </h1>
+
   <div class="w-full max-w-lg bg-white p-10 rounded-2xl shadow-xl border border-gray-100">
+  
     <!-- Title -->
-    <h1 class="text-4xl font-extrabold text-center text-gray-800 mb-8">
+    <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-8">
       ➕ Add New Customer
-    </h1>
+    </h2>
 
     <!-- Form -->
     <form action="" method="post" class="space-y-6">
