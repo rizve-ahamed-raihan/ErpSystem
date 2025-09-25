@@ -11,7 +11,7 @@
   <div class="w-full max-w-lg bg-white p-10 rounded-2xl shadow-xl border border-gray-100">
     <!-- Title -->
     <h1 class="text-4xl font-extrabold text-center text-gray-800 mb-8">
-      ➕ Add New Student
+      ➕ Add New Customer
     </h1>
 
     <!-- Form -->
@@ -42,7 +42,7 @@
       <!-- Submit Button -->
       <button type="submit"
         class="w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold py-3 rounded-lg shadow-md hover:from-blue-600 hover:to-blue-800 active:scale-95 transform transition duration-200">
-        🚀 Add Student
+        🚀 Add Customer
       </button>
     </form>
 
@@ -58,7 +58,7 @@
       class="block text-center px-6 py-3 bg-gradient-to-r from-green-500 to-green-700 
       text-white font-semibold rounded-lg shadow-md hover:from-green-600 hover:to-green-800 
       active:scale-95 transform transition duration-200">
-      📋 View Student List
+      📋 View Customer List
     </a>
   </div>
 

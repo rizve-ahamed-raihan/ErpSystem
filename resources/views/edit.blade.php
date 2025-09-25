@@ -9,7 +9,7 @@
 <body>
 <div class="min-h-screen flex items-center justify-center bg-gray-100">
   <div class="w-full max-w-lg bg-white p-8 rounded-xl shadow-xl">
-    <h1 class="text-3xl font-bold mb-6 text-center text-gray-800">Update Student Data</h1>
+    <h1 class="text-3xl font-bold mb-6 text-center text-gray-800">Update Customer Data</h1>
     
     <form action="/edit-student/{{ $data->id }}" method="post" class="space-y-6">
       @csrf

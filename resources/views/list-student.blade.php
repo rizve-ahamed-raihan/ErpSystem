@@ -10,14 +10,14 @@
   <div class="max-w-6xl mx-auto">
     <!-- Page Header -->
     <div class="flex items-center justify-between mb-8">
-      <h1 class="text-3xl font-bold text-gray-800 flex items-center gap-2">📋 Student List</h1>
+      <h1 class="text-3xl font-bold text-gray-800 flex items-center gap-2">📋 Customer List</h1>
       
       <!-- Add Student Button -->
       <a href="{{ url('/') }}" 
          class="inline-flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-blue-600 to-blue-500 
                 text-white font-semibold rounded-xl shadow-lg hover:from-blue-700 hover:to-blue-600 
                 active:scale-95 transition-transform duration-200">
-        ➕ Add Student
+        ➕ Add Customer
       </a>
     </div>
 
@@ -48,6 +48,11 @@
               <a href="{{'delete/'.$student->id}}" 
                  class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm font-semibold hover:bg-red-200 transition">
                  Delete
+              </a>
+
+               <a href="{{'entryform/'.$student->id}}" 
+                 class="px-3 py-1 bg-blue-100 text-green-700 rounded-full text-sm font-semibold hover:bg-blue-200 transition">
+                 Go
               </a>
             </td>
           </tr>
