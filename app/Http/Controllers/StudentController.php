@@ -10,7 +10,7 @@ use App\Models\Student;
 
 class StudentController extends Controller
 {
-    function store(Request $request){ //inport to database
+    function store(Request $request){ //import to database
       $student= new Student();
       $student->name=$request->name;
        $student->email=$request->email;
@@ -58,11 +58,7 @@ class StudentController extends Controller
       $studentData=Student::where('name','like',"%$request->search%")->get();
       return view('list-student',['students'=>$studentData]);
     }
-    // ফর্ম show করবে
-    // public function create($id){
-    //   $customer = Product::find($id);
-    // }
-    
+
 
     public function create($id)
 {
@@ -72,28 +68,7 @@ class StudentController extends Controller
     return view('salesentry', compact('customer', 'products'));
 }
 
-// public function storeProduct(Request $request)
-// {
-//     $product = new Salesentry();
-//     $product->qty= $request->qty;
-//     $product->price = $request->price;
-//     $product->discount  = $request->discount;
-//     $product->total  = $request->total;
-//     $product->save();
-//      if($product){
-//          return redirect('list');
-//        }else{
-//         echo "operation failed";
-//        }
-//     //       if($product->save()){
-//     //     return redirect('list');
-//     //   }else {
-//     //        return redirect()->back()->with('success', 'Product saved successfully!');
 
-//     //   }
-
-//     // echo "Store function called";
-// }
     public function storeProduct(Request $request, $customerId)
 {
     $customer = Student::findOrFail($customerId);
