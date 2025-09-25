@@ -21,3 +21,5 @@ Route::put('edit-student/{id}',[StudentController::class,'editStudent']);
 // Sales Entry form route
 Route::get('entryform/{id}', [StudentController::class,'create'])->name('sales.entryform');
 Route::post('save-product/{id}', [StudentController::class, 'storeProduct'])->name('sales.storeProduct');
+
+Route::get('search',[StudentController::class,'search']);

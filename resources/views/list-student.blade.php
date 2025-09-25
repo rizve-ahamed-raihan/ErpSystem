@@ -13,6 +13,11 @@
     <div class="flex items-center justify-between mb-8">
       <h1 class="text-3xl font-bold text-gray-800 flex items-center gap-2">📋 Customer List</h1>
       
+      <form action="search" method ="get" class="flex gap-2 items-center">
+    <input type="text"placeholder="Search With Name" name="search"   class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 w-full md:w-64"/>
+    <button  class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition">Search</button>
+      </form>
+      
       <!-- Add Student Button -->
       <a href="{{ url('/') }}" 
          class="inline-flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-blue-600 to-blue-500 
@@ -53,7 +58,7 @@
 
                <a href="{{'entryform/'.$student->id}}" 
                  class="px-3 py-1 bg-blue-100 text-green-700 rounded-full text-sm font-semibold hover:bg-blue-200 transition">
-                 Go
+                 Sales Entry
               </a>
             </td>
           </tr>
