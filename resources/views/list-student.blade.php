@@ -16,6 +16,7 @@
             <th class="border px-4 py-2 text-left">Email</th>
             <th class="border px-4 py-2 text-left">Phone</th>
             <th class="border px-4 py-2 text-left">Created</th>
+            <th class="border px-4 py-2 text-left">Operation</th>
           </tr>
         </thead>
         <tbody>
@@ -25,6 +26,7 @@
             <td class="border px-4 py-2">{{ $student->email }}</td>
             <td class="border px-4 py-2">{{ $student->phone }}</td>
             <td class="border px-4 py-2">{{ $student->created_at }}</td>
+            <td class="border px-4 py-2"><a href="{{ 'delete/'.$student->id }}">Delete</a></td>
           </tr>
           @endforeach
 

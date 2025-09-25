@@ -13,20 +13,26 @@ class StudentController extends Controller
         $student->phone=$request->phone;
        $student->save();
        if($student){
-        echo "new student added";
+         return redirect('list');
        }else{
         echo "operation failed";
        }
 
     }
     
-    function add(){
+    function list(){
        $studentData= Student:: all();
       return view('list-student',['students'=>$studentData]);
     }
 
-    // function click(){
-    //   // return view('add-student');
-    //   return "click function called";
-    // }
+    function delete($id){
+        $isDeleted=Student::destroy($id);
+        if($isDeleted){
+             return redirect('list');
+      }
+    }
+
+
+
+    
 }
