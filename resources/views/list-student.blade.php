@@ -5,46 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="p-6">
-    <h1 class="text-xl font-bold mb-4">Student List</h1>
-
-    <div class="overflow-x-auto">
-      <table class="table-auto border border-gray-300 w-full bg-sky-100">
-        <thead class="bg-gray-100">
-          <tr>
-            <th class="border px-4 py-2 text-left">Name</th>
-            <th class="border px-4 py-2 text-left">Email</th>
-            <th class="border px-4 py-2 text-left">Phone</th>
-            <th class="border px-4 py-2 text-left">Created</th>
-            <th class="border px-4 py-2 text-left">Operation</th>
-          </tr>
-        </thead>
-        <tbody>
-          @foreach($students as $student)
-          <tr class="hover:bg-gray-50">
-            <td class="border px-4 py-2">{{ $student->name }}</td>
-            <td class="border px-4 py-2">{{ $student->email }}</td>
-            <td class="border px-4 py-2">{{ $student->phone }}</td>
-            <td class="border px-4 py-2">{{ $student->created_at }}</td>
-            <td
-             class="border px-4 py-2">
-             <a href="{{'delete/'.$student->id}}">Delete</a>
-             <a href="{{'edit/'.$student->id}}">Edit</a>
-            </td>
-          </tr>
-          @endforeach
-
+  <body class="p-6 bg-gray-50 min-h-screen">
+    <div class="max-w-6xl mx-auto">
+      <!-- Page Header -->
+      <div class="flex items-center justify-between mb-6">
+        <h1 class="text-2xl font-bold text-gray-800">📋 Student List</h1>
         
-        </tbody>
-      </table>
-    </div>
-    <br/> <br/>
-    <div >
-        <form action=" " method="post">
-            @csrf
-            <button class ="flex items-center justify-center px-6 py-2 bg-blue-600 text-white font-medium rounded-lg 
-         hover:bg-blue-700 active:scale-95 transition transform">Add New Student</button>
-          </form>
+        <!-- Add Student Button -->
+        <a href="{{ url('/') }}" 
+           class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-blue-500 
+                  text-white font-semibold rounded-xl shadow-md hover:from-blue-700 hover:to-blue-600 
+                  active:scale-95 transition-transform duration-200">
+          ➕ Add Student
+        </a>
+      </div>
+
+      <!-- Table -->
+      <div class="overflow-x-auto rounded-xl shadow-md bg-white">
+        <table class="table-auto border-collapse w-full">
+          <thead class="bg-gray-100 text-gray-700">
+            <tr>
+              <th class="border px-4 py-3 text-left">Name</th>
+              <th class="border px-4 py-3 text-left">Email</th>
+              <th class="border px-4 py-3 text-left">Phone</th>
+              <th class="border px-4 py-3 text-left">Created</th>
+              <th class="border px-4 py-3 text-left">Operation</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            @foreach($students as $student)
+            <tr class="hover:bg-gray-50 transition">
+              <td class="px-4 py-3">{{ $student->name }}</td>
+              <td class="px-4 py-3">{{ $student->email }}</td>
+              <td class="px-4 py-3">{{ $student->phone }}</td>
+              <td class="px-4 py-3 text-sm text-gray-500">{{ $student->created_at }}</td>
+              <td class="px-4 py-3 flex gap-3">
+                <a href="{{'edit/'.$student->id}}" 
+                   class="text-blue-600 hover:underline font-medium">Edit</a>
+                <a href="{{'delete/'.$student->id}}" 
+                   class="text-red-600 hover:underline font-medium">Delete</a>
+              </td>
+            </tr>
+            @endforeach
+          </tbody>
+        </table>
+      </div>
     </div>
   </body>
 </html>
